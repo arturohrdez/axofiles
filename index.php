@@ -19,7 +19,8 @@ $config["smpt_user"]           = "no-reply@vicom.mx"; // SMTP account username
 $config["smpt_pwd"]            = "OC8wV^HDRs!G";// SMTP account password
 $config["smpt_name_from"]      = "Vicom";
 $config["subject_title"]       = "Vicom | Axo Files Validate";
-$config["to"]                  = "arturohrdez@gmail.com,arturohrdez@outlook.com";
+//$config["to"]                  = "arturohrdez@gmail.com,arturohrdez@outlook.com,janet@vicom.mx";
+$config["to"]                  = "arturohrdez@outlook.com,janet@vicom.mx";
 
 
 if(empty($instancia)){
@@ -141,8 +142,8 @@ function formatTitle($string){
 
 
 function validaArchivo($file_name){
-    $columnasRequeridas_titulos   = ["codigo_producto","titulo_producto","marca","sku","ean/upc","fecha_de_lanzamiento","departamento","categoria","talla","color","genero","deporte","edad"];
-    $columnasRequeridas_contenido = ["A","B","C","D","E","G","L","M","O","P","Q","R","U"];
+    $columnasRequeridas_titulos   = ["codigo_producto","titulo_producto","marca","sku","ean/upc","fecha_de_lanzamiento","departamento","categoria","talla","color","genero"];
+    $columnasRequeridas_contenido = ["A","B","C","D","E","G","L","M","O","P","Q"];
 
     if(file_exists($file_name)){
         $documento    = IOFactory::load($file_name);
